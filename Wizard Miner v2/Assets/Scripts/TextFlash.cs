@@ -13,13 +13,14 @@ public class TextFlash : MonoBehaviour {
     private float timer = 0f;
     private Text text;
 	
-	// Update is called once per frame
+    // Use this for initialisation
     void Start()
     {
         text = GetComponent<Text>();
     }
 
-	void Update () 
+    // Update is called once per frame
+    void Update () 
     {
         if (isFlashing)
         {
@@ -33,5 +34,5 @@ public class TextFlash : MonoBehaviour {
         }
         else
             text.color = offColour;
-	}
+    }
 }

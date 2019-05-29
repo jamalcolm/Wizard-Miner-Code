@@ -67,8 +67,6 @@ public class TileObject
     private float animTime = 0f;
     private int count;
 
-    //public TileObject(){}
-
     //Initialise from template (see LevelGenerator)
     public void Init(int templateId)
     {
@@ -333,6 +331,7 @@ public class TileObject
     }
     Vector2Int LevelIn(Vector2Int vec){return new Vector2Int(LevelX(vec.x), LevelY(vec.y));}
     TileObject At(Vector2Int vec){return level.tiles[LevelX(position.x + vec.x), LevelY(position.y + vec.y)];}
+
     //Check adjacent tiles for tileobject of name
     bool Adj(string name)
     {
@@ -343,18 +342,21 @@ public class TileObject
         }
         return false;
     }
+
     //Check if can move relative to position
     bool CanTravel(Vector2Int vec)
     {
         TileObject obj = At(vec);
         return ((obj.name == "space" && obj.direction == Vector2Int.zero) || travels.Contains(obj.name));
     }
+
     //Simplified version
     bool CanTravel2(Vector2Int vec)
     {
         TileObject obj = At(vec);
         return ((obj.name == "space") || travels.Contains(obj.name));
     }
+
     //Move object relative to position
     void Move(Vector2Int vec)
     {
@@ -377,6 +379,7 @@ public class TileObject
         level.tiles[position.x, position.y] = this;
         updated = true;
     }
+
     //Push an object in direction, moving with it
     void Push(Vector2Int vec)
     {
@@ -736,7 +739,7 @@ public class TileObject
     //Fireball
     void FireballUpdate()
     {
-        //Move in given direction (note CanTravel2, not CanTravel)
+        //Move in given direction
         if (CanTravel2(lastDir))
         {          
             string objName = At(lastDir).name;

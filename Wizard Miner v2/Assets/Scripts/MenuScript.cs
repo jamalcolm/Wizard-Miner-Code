@@ -22,12 +22,12 @@ public class MenuScript : MonoBehaviour {
     public Slider gameSpeedSlider;
     public Toggle fixedCameraToggle;
 
-	// Use this for initialization
-	void Start () 
+    // Use this for initialization
+    void Start () 
     {
         mainMenu.SetActive(true);
         optionsMenu.SetActive(false);
-	}
+    }
 	
     public void StartButtonOnClick()
     {

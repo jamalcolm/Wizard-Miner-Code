@@ -23,15 +23,15 @@ public class TileManager : MonoBehaviour {
     private Level level;
     private Controls controls;   
 
-	// Use this for initialization
-	void Start () 
+    // Use this for initialization
+    void Start () 
     {
         controls = GetComponent<Controls>();
         TileObject.tmManager = GetComponent<TileManager>();
 	}
 	
-	// Update is called once per frame
-	void Update () 
+    // Update is called once per frame
+    void Update () 
     {
         level = LevelGenerator.level;
 

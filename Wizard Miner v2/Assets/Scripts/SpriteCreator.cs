@@ -24,15 +24,14 @@ public class SpriteCreator : MonoBehaviour {
     public Sprite gemSprite1;
     public Sprite gemSprite2;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start() 
+    {
         Init();
-	}	
+    }	
 
     public void Init()
     {
-        //Random.state = seed;
-        //Random.InitState(seed);
         wallWidth = size/Random.Range(1,4);
         wallHeight = size/Random.Range(1,4);
         wallXoff = size/Random.Range(1,4);

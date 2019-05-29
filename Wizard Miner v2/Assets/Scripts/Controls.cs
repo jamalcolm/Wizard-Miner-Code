@@ -9,8 +9,6 @@ using UnityEngine;
      * change1: Increment magic id
      * change2: Decrement magic id
      * 
-     * TODO: Make controls more responsive
-     * TODO: Implement joystick controls
      * 
     */
 
@@ -32,7 +30,7 @@ public class Controls : MonoBehaviour {
     private TileManager tmManager;
     private LevelGenerator lgScript;
 
-    //Start
+    // Use this for initialization
     void Start()
     {
         TileObject.controls = GetComponent<Controls>();
@@ -48,8 +46,8 @@ public class Controls : MonoBehaviour {
         useAction = false;
     }
                 
-	// Update is called once per frame
-	void Update () 
+    // Update is called once per frame
+    void Update () 
     {
         //Set direction
         if (tmManager.progress >= progressResponse)
@@ -76,5 +74,5 @@ public class Controls : MonoBehaviour {
             lgScript.ChangeMagic(1);
         if (Input.GetKeyDown(but_change2))
             lgScript.ChangeMagic(-1);
-	}
+    }
 }

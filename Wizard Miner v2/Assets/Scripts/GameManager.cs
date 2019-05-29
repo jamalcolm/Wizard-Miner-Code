@@ -22,8 +22,8 @@ public class GameManager : MonoBehaviour {
     private float timer;
     private bool reset;
 
-	// Use this for initialization
-	void Start () 
+    // Use this for initialization
+    void Start() 
     {
         //Find all game components
         levelLoader = GetComponent<LevelLoader>();
@@ -39,15 +39,13 @@ public class GameManager : MonoBehaviour {
 
         //Generate the level
         GenerateLevel();
-	}
+    }
 	
-	// Update is called once per frame
-	void Update () {
+    // Update is called once per frame
+    void Update() 
+    {
 
-        //Decrement game time 
-        //(TODO: Relate this to game speed so it is fairer)
-        //(TODO: Add a time-trial mode where time increases instead of decreases)
-        //(TODO: Do only if player is alive, have a 'playerAlive' variable)
+        //Decrement game time
         if (time > 0)
         {
             timer += Time.deltaTime;
@@ -74,7 +72,7 @@ public class GameManager : MonoBehaviour {
             reset = false;
             GenerateLevel();
         }
-	}
+    }
 
     #region game_functions
     public void GenerateLevel()

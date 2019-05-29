@@ -35,7 +35,7 @@ public class LevelGenerator : MonoBehaviour {
     private SpriteCreator spriteCreator;
     private CameraScript cameraScript;
 
-	// Use this for initialization
+    //Initialisation script
     public void Init()
     {
         //Set static tileobject reference
@@ -106,7 +106,6 @@ public class LevelGenerator : MonoBehaviour {
     }
 
     //Create new object and initialise type
-
     TileObject Create(int type, Vector2Int position, string exData="")
     {
         TileObject obj = new TileObject();

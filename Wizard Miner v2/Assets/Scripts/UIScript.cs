@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 
 //User interface for the game
-
 public class UIScript : MonoBehaviour {
 
     public Image magicImage;
@@ -18,22 +17,21 @@ public class UIScript : MonoBehaviour {
     private GameManager gmManager;
     public LevelGenerator lgScript;
 
-	// Use this for initialization
-	void Start () 
+    // Use this for initialization
+    void Start () 
     {
         gmManager = GameObject.Find("GameController").GetComponent<GameManager>();	
         lgScript = GameObject.Find("GameController").GetComponent<LevelGenerator>();
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () 
     {
         //Timer
-
         magicImage.sprite = lgScript.spells[lgScript.magicId].sprite;
         magicText.text = lgScript.magicAmount.ToString();
 
-        //Not the cleanest code, but it gets the job done!
+        //Get timer to flash when less than 10 seconds left
         timeText.text = gmManager.time.ToString();
         if (gmManager.time < 10)
         {
@@ -59,5 +57,5 @@ public class UIScript : MonoBehaviour {
             collectedText.color = Color.white;
             quotaText.color = Color.white;
         }
-	}
+    }
 }

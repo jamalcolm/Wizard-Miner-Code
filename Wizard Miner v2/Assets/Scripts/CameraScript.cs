@@ -29,8 +29,8 @@ public class CameraScript : MonoBehaviour {
     private Vector2 tileSize;
     private float progress;
 
-	// Use this for initialization
-	void Start () 
+    // Use this for initialization
+    void Start () 
     {
         //Initialise camera
         tileParent = GameObject.Find ("Tiles").transform;
@@ -49,7 +49,7 @@ public class CameraScript : MonoBehaviour {
                 tiles[x, y].transform.position = new Vector3(ViewX(x), ViewY(y));
                 tiles[x, y].transform.localScale = tileSize;
             }	
-	}
+    }
 
     //Get tile position according to screen
     float ViewX(float x)
@@ -63,7 +63,7 @@ public class CameraScript : MonoBehaviour {
     }
 	
 	// Update is called once per frame
-	void Update () 
+    void Update () 
     {
         //Progress = amount of time between current and previous frame
         if (smooth)
@@ -111,7 +111,7 @@ public class CameraScript : MonoBehaviour {
                         SetTile(tiles[x,y], x,y, noneSprite, Vector2Int.zero);
                 }
             }
-	}
+    }
 
     //Set tile TileId 
     void SetTile(GameObject tileId, int x, int y, Sprite sprite, Vector2Int direction)
