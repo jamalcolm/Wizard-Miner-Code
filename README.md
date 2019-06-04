@@ -10,3 +10,5 @@ Left stick - Move
 B - Action
 
 ![Gameplay Screenshot](wizard-miner-2.png)
+
+[linkname](https://www.youtube.com/watch?v=O938fuB3ebk)
